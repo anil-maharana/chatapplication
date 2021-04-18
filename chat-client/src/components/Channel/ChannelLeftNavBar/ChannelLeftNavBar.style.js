@@ -1,0 +1,21 @@
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles(theme => ({
+    root: {
+        width: "100%",
+        // maxWidth: 360,
+        backgroundColor: theme.palette.background.paper,
+    },
+
+    ChannelLeftNavBar: {
+        height: "100%",
+        // minHeight: "100%",
+        // position: "absolute",
+        backgroundColor: "white",
+        borderRight: "1px solid rgba(0, 0, 0, 0.12)",
+        borderRightColor: theme.palette.grey,
+        maxHeight: '100%', overflow: 'auto'
+    },
+}));
+
+export default useStyles;
