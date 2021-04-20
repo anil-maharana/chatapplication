@@ -13,7 +13,7 @@ exports.findAll = async function (req, res) {
     .limit(pageOptions.limit)
     .then(data => {
       res.send(data);
-      //console.log(data);
+      // console.log(data);
     })
     .catch(err => {
       console.log(err);

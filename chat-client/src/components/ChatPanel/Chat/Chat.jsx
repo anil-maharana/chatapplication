@@ -6,7 +6,6 @@ import parse from "html-react-parser";
 
 function Chat(props) {
   const classes = useStyles();
-  console.log(props.chatDetails);
   const {
     chatId,
     chatMessage,
@@ -27,9 +26,7 @@ function Chat(props) {
         {chatType === "outgoing" ? (
           <Avatar
             alt={`Avatar n°${chatUserId + 1}`}
-            src={`https://material-ui.com/static/images/avatar/${
-              chatUserId + 1
-            }.jpg`}
+            src={`https://material-ui.com/static/images/avatar/${1}.jpg`}
             className={classes.chatUserImage}
           />
         ) : null}
@@ -48,6 +45,7 @@ function Chat(props) {
             className={classes.chatDateandTime}
             align="right"
           >
+            {chatDateAndTime.toDateString()},{" "}
             {chatDateAndTime.toLocaleTimeString()}
           </Typography>
         </div>
